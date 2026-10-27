@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #f7f3ee;
+  --color-cream: #f1ebe3;
+  --color-beige: #e6ddd1;
+  --color-sand: #d8ccbe;
+  --color-ink: #1f1a17;
+  --color-ink-soft: #6b625a;
+  --color-taupe: #9a8776;
+  --color-brown: #7a6554;
+  --color-line: rgba(31, 26, 23, 0.12);
+  --color-foam: #fffcf8;
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+}
+
+:root {
+  --header-h: 4.75rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse 70% 45% at 0% 0%, rgba(154, 135, 118, 0.08), transparent 55%),
+    radial-gradient(ellipse 55% 40% at 100% 15%, rgba(122, 101, 84, 0.06), transparent 50%),
+    linear-gradient(180deg, var(--color-ivory) 0%, var(--color-cream) 100%);
+  background-attachment: fixed;
+  color: var(--color-ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-weight: 300;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(154, 135, 118, 0.28);
+}
+
+@layer base {
+  a {
+    color: inherit;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.section-shell {
+  width: min(1120px, calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-brown);
+}
+
+.divider {
+  height: 1px;
+  background: var(--color-line);
+  border: 0;
+}
+
+.faq-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.faq-content[data-open="true"] {
+  grid-template-rows: 1fr;
+}
+
+.faq-content > div {
+  overflow: hidden;
+}
+
+.hero-copy {
+  animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-zoom {
+  animation: hero-zoom 12s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  transform: scale(1.05);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.4rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hero-zoom {
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .hero-copy,
+  .hero-zoom {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
