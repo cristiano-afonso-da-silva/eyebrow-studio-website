@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { siteConfig } from "@/config/site";
+import { asset } from "@/lib/asset";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -28,7 +29,7 @@ export function Gallery() {
           <Reveal key={item.src} delay={index * 0.04} className="mb-4 break-inside-avoid">
             <figure className="overflow-hidden">
               <Image
-                src={item.src}
+                src={asset(`/images/${item.src}`)}
                 alt={item.alt}
                 width={900}
                 height={item.span === "wide" ? 700 : item.span === "tall" ? 1200 : 900}

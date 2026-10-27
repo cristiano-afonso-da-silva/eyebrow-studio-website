@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { getBookingHref } from "@/lib/booking";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
@@ -8,7 +9,7 @@ export function BookingCTA() {
     <section className="relative overflow-hidden py-[clamp(5rem,12vw,8rem)]">
       <div className="absolute inset-0">
         <Image
-          src="/images/cta.jpg"
+          src={asset("/images/cta.jpg")}
           alt="Soft beauty textures in warm editorial light"
           fill
           className="object-cover"

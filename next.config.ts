@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const repoName = "eyebrow-studio-website";
 const isGithubPages = process.env.GITHUB_PAGES === "true";
+const basePath = isGithubPages ? `/${repoName}` : "";
 
 const nextConfig: NextConfig = {
   output: "export",
@@ -9,8 +10,11 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
-  basePath: isGithubPages ? `/${repoName}` : "",
-  assetPrefix: isGithubPages ? `/${repoName}/` : undefined,
+  basePath,
+  assetPrefix: basePath ? `${basePath}/` : undefined,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   turbopack: {
     root: __dirname,
     rules: {

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
+import { asset } from "@/lib/asset";
 import { getBookingHref } from "@/lib/booking";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
@@ -24,7 +25,7 @@ export function Services() {
               <article className="group">
                 <div className="overflow-hidden">
                   <Image
-                    src={service.image}
+                    src={asset(`/images/${service.image}`)}
                     alt={service.imageAlt}
                     width={900}
                     height={1100}

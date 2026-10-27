@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
+import { asset } from "@/lib/asset";
 
 export function About() {
   return (
@@ -8,7 +9,7 @@ export function About() {
         <Reveal>
           <figure className="overflow-hidden">
             <Image
-              src="/images/about.jpg"
+              src={asset("/images/about.jpg")}
               alt="Soft editorial portrait with natural makeup and defined features"
               width={1200}
               height={1500}

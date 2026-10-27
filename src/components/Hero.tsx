@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { getBookingHref } from "@/lib/booking";
 import { Button } from "@/components/ui/Button";
 
@@ -11,7 +12,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <div className="hero-zoom absolute inset-0">
           <Image
-            src="/images/hero.jpg"
+            src={asset("/images/hero.jpg")}
             alt="Close editorial portrait focusing on soft facial features"
             fill
             priority

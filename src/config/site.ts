@@ -51,7 +51,7 @@ export const siteConfig = {
         "Precision shaping designed to complement your natural facial structure.",
       duration: "Duration TBD",
       price: "Pricing TBD",
-      image: "/images/service-1.jpg",
+      image: "service-1.jpg",
       imageAlt: "Soft beauty products arranged in calm studio light",
     },
     {
@@ -61,7 +61,7 @@ export const siteConfig = {
         "Soft, natural-looking definition that enhances your existing brows.",
       duration: "Duration TBD",
       price: "Pricing TBD",
-      image: "/images/service-2.jpg",
+      image: "service-2.jpg",
       imageAlt: "Warm makeup textures and soft neutral tones",
     },
     {
@@ -71,7 +71,7 @@ export const siteConfig = {
         "Fuller, beautifully styled brows with a polished finish.",
       duration: "Duration TBD",
       price: "Pricing TBD",
-      image: "/images/service-3.jpg",
+      image: "service-3.jpg",
       imageAlt: "Calm spa atmosphere with soft natural light",
     },
     {
@@ -81,34 +81,34 @@ export const siteConfig = {
         "A personalized combination of treatments for a complete brow refresh.",
       duration: "Duration TBD",
       price: "Pricing TBD",
-      image: "/images/service-4.jpg",
+      image: "service-4.jpg",
       imageAlt: "Quiet beauty ritual in a refined treatment setting",
     },
   ],
 
   gallery: [
     {
-      src: "/images/gallery-1.jpg",
+      src: "gallery-1.jpg",
       alt: "Editorial portrait with soft natural light",
       span: "tall" as const,
     },
     {
-      src: "/images/gallery-2.jpg",
+      src: "gallery-2.jpg",
       alt: "Close beauty portrait highlighting facial features",
       span: "square" as const,
     },
     {
-      src: "/images/gallery-3.jpg",
+      src: "gallery-3.jpg",
       alt: "Detailed eye and brow photography",
       span: "wide" as const,
     },
     {
-      src: "/images/gallery-4.jpg",
+      src: "gallery-4.jpg",
       alt: "Natural skin texture in soft daylight",
       span: "square" as const,
     },
     {
-      src: "/images/gallery-5.jpg",
+      src: "gallery-5.jpg",
       alt: "Quiet portrait with refined expression",
       span: "tall" as const,
     },
